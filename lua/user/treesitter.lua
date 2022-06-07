@@ -20,4 +20,24 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   },
+  refactor = {
+    smart_rename = { enable = true, keymaps = { smart_rename = "grr" } },
+    highlight_definitions = { enable = true },
+    navigation = {
+      enable = true,
+      keymaps = {
+        goto_definition_lsp_fallback = "gnd"
+      }
+    },
+    textobjects = {
+      lsp_interop = {
+        enable = true,
+        border = "none",
+        peek_definition_code = {
+          ["df"] = "@function.outer",
+          ["dF"] = "@class.outer",
+        },
+      },
+    },
+  },
 }
