@@ -18,6 +18,14 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- keymaps for Hop
+keymap("n", 'f', "<cmd>lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false })<cr>", {})
+keymap("n", "<leader>;", "<cmd>lua require'hop'.hint_words()<cr>", {})
+keymap("n", "<leader><leader>;", "<cmd>lua require'hop'.hint_words()<cr>", {})
+keymap("n", 'F', "<cmd>lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false })<cr>", {})
+keymap("n", 't', "<cmd>lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })<cr>", {})
+keymap("n", 'T', "<cmd>lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>", {})
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -26,8 +34,8 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
@@ -36,8 +44,8 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>==g<Esc>", opts)
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>==g<Esc>", opts)
 
 -- Insert --
 -- Press jk fast to enter

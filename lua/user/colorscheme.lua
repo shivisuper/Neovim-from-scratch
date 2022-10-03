@@ -1,6 +1,13 @@
+-- configure tokyonight
+vim.g.tokyonight_style = "storm"
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+
+-- enable tokyonight
 vim.cmd [[
 try
-  colorscheme darkplus
+  colorscheme tokyonight
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark

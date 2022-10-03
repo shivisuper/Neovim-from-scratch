@@ -26,7 +26,8 @@ configs.setup {
     navigation = {
       enable = true,
       keymaps = {
-        goto_definition_lsp_fallback = "gnd"
+        goto_definition_lsp_fallback = "gd",
+        list_definitions = "gnD"
       }
     },
     textobjects = {

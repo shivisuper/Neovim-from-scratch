@@ -61,7 +61,9 @@ return packer.startup(function(use)
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  -- use "lunarvim/darkplus.nvim"
+  -- amazing tokyonight theme
+  use "folke/tokyonight.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -90,10 +92,25 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use "nvim-treesitter/nvim-treesitter-refactor" -- Refactor plugin for tree sitter
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  -- Clojure
+  use 'Olical/conjure'
+
+
+  -- Hop: Vim motion on steroids
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', --optional but strongly recommended
+    config = function ()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
