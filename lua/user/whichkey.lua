@@ -181,6 +181,16 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  [","] = {
+    name = "Conjure",
+    b = { "<cmd>ConjureEvalBuf<cr>", "Evaluate buffer" },
+    r = { "<cmd>ConjureEvalRootForm<cr>", "Evaluate root form" },
+    e = { "<cmd>ConjureEvalCurrentForm<cr>", "Evaluate current form" },
+    w = { "<cmd>ConjureEvalWord<cr>", "Evaluate word" },
+    l = { "<cmd>ConjureLogToggle<cr>", "Toggle log buffer" },
+    d = { "<cmd>ConjureDocWord<cr>", "Show doc for word under cursor" }
+  }
 }
 
 which_key.setup(setup)
