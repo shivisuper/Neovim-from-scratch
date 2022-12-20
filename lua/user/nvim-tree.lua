@@ -118,8 +118,8 @@ nvim_tree.setup {
         { key = "v", cb = tree_cb "vsplit" },
       },
     },
-    number = false,
-    relativenumber = false,
+    number = true,
+    relativenumber = true,
   },
   trash = {
     cmd = "trash",
@@ -127,7 +127,7 @@ nvim_tree.setup {
   },
   actions = {
     open_file = {
-      quit_on_open = true,
+      quit_on_open = false,
       window_picker = {
             enable = false,
       },
