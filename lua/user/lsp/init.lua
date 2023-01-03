@@ -5,4 +5,4 @@ end
 
 require "user.lsp.lsp-installer"
 require("user.lsp.handlers").setup()
--- require "user.lsp.null-ls" -- need to fix issue with null-ls plugin before enabling it
+require "user.lsp.null-ls" -- need to fix issue with null-ls plugin before enabling it
