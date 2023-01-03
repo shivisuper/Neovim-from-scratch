@@ -182,6 +182,34 @@ local mappings = {
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
 
+  R = {
+    name = "Rust",
+    r = { "<cmd>RustRunnables<Cr>", "Runnables" },
+    e = { "Expand",
+      m = { "<cmd>RustExpandMacro<Cr>", "Expand macro" },
+      f = { "<cmd>RustExpand<Cr>", "Expand file" }
+    },
+    w = { "<cmd>RustReloadWorkspace<Cr>", "Reload workspace" },
+    t = { "<cmd>RustToggleInlayHints<Cr>", "Toggle inlay hints" },
+    o = { "<cmd>RustOpenCargo<Cr>", "Open cargo" },
+    p = { "<cmd>RustParentModule<Cr>", "Parent module" },
+    j = { "<cmd>RustJoinLines<Cr>", "Join lines" },
+    h = {
+      "Hover",
+      a = { "<cmd>RustHoverActions<Cr>", "Hover actions" },
+      r = { "<cmd>RustHoverRange<Cr>", "Hover range" },
+    },
+    m = {
+      "Move",
+      d = { "<cmd>RustMoveItemDown<Cr>", "Move down" },
+      u = { "<cmd>RustMoveItemUp<Cr>", "Move up" },
+    },
+    s = { "<cmd>RustStartStandaloneServerForBuffer<Cr>", "Start standalone server" },
+    d = { "<cmd>RustDebuggables<Cr>", "Debuggables" },
+    v = { "<cmd>RustViewCrateGraph<Cr>", "View crate graph" },
+    x = { "<cmd>RustOpenExternalDocs<Cr>", "Open external docs" }
+  },
+
   [","] = {
     name = "Conjure",
     b = { "<cmd>ConjureEvalBuf<cr>", "Evaluate buffer" },
