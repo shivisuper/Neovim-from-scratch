@@ -208,7 +208,11 @@ local mappings = {
     r = { "<cmd>ConjureEvalRootForm<cr>", "Evaluate root form" },
     e = { "<cmd>ConjureEvalCurrentForm<cr>", "Evaluate current form" },
     w = { "<cmd>ConjureEvalWord<cr>", "Evaluate word" },
-    l = { "<cmd>ConjureLogToggle<cr>", "Toggle log buffer" },
+    l = { "Conjure logs",
+      l = { "<cmd>ConjureLogToggle<cr>", "Toggle log buffer" },
+      r = { "<cmd>ConjureLogResetSoft<cr>", "Soft reset log" },
+      R = { "<cmd>ConjureLogResetHard<cr>", "Hard reset log" }
+    },
     d = { "<cmd>ConjureDocWord<cr>", "Show doc for word under cursor" }
   }
 }

@@ -62,6 +62,8 @@ local function lsp_keymaps(bufnr)
   keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   keymap(bufnr, "n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
   keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+  keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+  keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.document_symbol()<CR>", opts)
 end
 
 M.on_attach = function(client, bufnr)
