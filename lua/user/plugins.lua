@@ -85,6 +85,9 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "simrat39/rust-tools.nvim" -- To enable more of the features of rust-analyzer, such as inlay hints
 
+  -- Java
+  use "mfussenegger/nvim-jdtls"
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 

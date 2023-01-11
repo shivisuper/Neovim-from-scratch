@@ -6,7 +6,7 @@ end
 local servers = {
   "clangd",
   "sumneko_lua",
-  "jdtls",
+  --"jdtls",
   "clojure_lsp",
   "jsonls",
   "yamlls",
