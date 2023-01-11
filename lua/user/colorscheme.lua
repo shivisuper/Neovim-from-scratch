@@ -7,7 +7,7 @@ local settings = {
   styles = {
     -- Value is any valid attr-list value for `:help nvim_set_hl`
     comments = { italic = true },
-    functions = {},
+    functions = { bold = true },
     variables = {},
     keywords = { italic = true }
   },
