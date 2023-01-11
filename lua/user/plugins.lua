@@ -79,7 +79,8 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "williamboman/mason.nvim" -- the new and improved lsp installer
+  use "williamboman/mason-lspconfig.nvim" -- plugin for mason.nvim
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "simrat39/rust-tools.nvim" -- To enable more of the features of rust-analyzer, such as inlay hints
