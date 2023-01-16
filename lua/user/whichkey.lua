@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+-- this is a test comment
+
 local setup = {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
