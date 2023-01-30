@@ -50,24 +50,31 @@ for _, server in pairs(servers) do
 
   if server == "rust_analyzer" then
 
-    require("rust-tools").setup {
-      tools = {
-        on_initialized = function()
-          vim.cmd [[
-     autocmd BufEnter,CursorHold,InsertLeave,BufWritePost *.rs silent! lua vim.lsp.codelens.refresh()
-     ]]
-        end,
-      },
-      server = {
-        on_attach = require("user.lsp.handlers").on_attach,
-        capabilities = require("user.lsp.handlers").capabilities,
-        settings = require("user.lsp.settings.rust_analyzer").settings,
-      },
+    opts = {
+      capabilities = require("user.lsp.handlers").capabilities,
+      on_attach = require("user.lsp.handlers").on_attach,
+      settings = require("user.lsp.settings.rust_analyzer").settings,
+      cmd = {
+        "rustup", "run", "stable", "rust-analyzer",
+      }
     }
 
-    goto continue
+    --require("rust-tools").setup {
+    --  tools = {
+    --    on_initialized = function()
+    --      vim.cmd [[ autocmd BufEnter,CursorHold,InsertLeave,BufWritePost *.rs silent! lua vim.lsp.codelens.refresh() ]]
+    --    end,
+    --  },
+    --  server = {
+    --    on_attach = require("user.lsp.handlers").on_attach,
+    --    capabilities = require("user.lsp.handlers").capabilities,
+    --    settings = require("user.lsp.settings.rust_analyzer").settings,
+    --  },
+    --}
+
+    --goto continue
   end
 
   lspconfig[server].setup(opts)
-  ::continue::
+  --::continue::
 end
