@@ -58,23 +58,7 @@ for _, server in pairs(servers) do
         "rustup", "run", "stable", "rust-analyzer",
       }
     }
-
-    --require("rust-tools").setup {
-    --  tools = {
-    --    on_initialized = function()
-    --      vim.cmd [[ autocmd BufEnter,CursorHold,InsertLeave,BufWritePost *.rs silent! lua vim.lsp.codelens.refresh() ]]
-    --    end,
-    --  },
-    --  server = {
-    --    on_attach = require("user.lsp.handlers").on_attach,
-    --    capabilities = require("user.lsp.handlers").capabilities,
-    --    settings = require("user.lsp.settings.rust_analyzer").settings,
-    --  },
-    --}
-
-    --goto continue
   end
 
   lspconfig[server].setup(opts)
-  --::continue::
 end
