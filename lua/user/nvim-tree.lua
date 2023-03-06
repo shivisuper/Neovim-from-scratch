@@ -74,7 +74,6 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
   diagnostics = {
