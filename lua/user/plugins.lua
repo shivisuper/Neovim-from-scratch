@@ -41,6 +41,33 @@ require('lazy').setup({
   'saadparwaiz1/cmp_luasnip', -- snippet completions
   'hrsh7th/cmp-nvim-lsp',
 
+  -- neorg
+  {
+    'nvim-neorg/neorg',
+    build = ':Neorg sync-parsers',
+    opts = {
+      load = {
+        ['core.defaults'] = {}, -- Loads default behaviour
+        ['core.norg.concealer'] = {
+          config = {
+            icon_preset = 'diamond',
+          }
+        }, -- Adds pretty icons to your documents
+        ['core.norg.dirman'] = { -- Manages Neorg workspaces
+          config = {
+            workspaces = {
+              misc = '~/notes/misc',
+              work = '~/notes/work'
+            },
+            index = 'main.norg',
+            default_workspace = 'misc',
+          },
+        },
+      },
+    },
+    dependencies = { { 'nvim-lua/plenary.nvim' } },
+  },
+
   -- snippets
   'L3MON4D3/LuaSnip', --snippet engine
   'rafamadriz/friendly-snippets', -- a bunch of snippets to use
